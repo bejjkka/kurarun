@@ -139,7 +139,7 @@ function showGameOver(){
     const smallfontSize = 15* scaleRatio;
     ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";    
-    ctx.fillText("*to retry: press space/screen tap", canvas.width/2, canvas.height/2 + 60 * scaleRatio);
+    ctx.fillText("*to retry: press space/ tap screen", canvas.width/2, canvas.height/2 + 60 * scaleRatio);
     }
 
 function setupReset(){
