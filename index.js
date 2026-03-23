@@ -146,7 +146,7 @@ startButton.addEventListener('click', startGame);
 
 function showGameOver(){
     const fontSize = 80* scaleRatio;
-    ctx.font= '${fontSize}px Verdana';
+    ctx.font= `${fontSize}px Verdana`;
     ctx.fillStyle = "white";
     const x = canvas.width/4.5;
     const.y = canvas.height/ 2;
