@@ -216,7 +216,7 @@ function gameLoop(currentTime){
           showGameOver();
      }
 
-    //if (isGameStarted && !gameOver) {
+    if (isGameStarted && !gameOver) {
     gameLoopId = requestAnimationFrame(gameLoop);
     }
 }    
