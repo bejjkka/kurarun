@@ -130,7 +130,7 @@ function showGameOver(){
     const x = canvas.width/2;
     const y = canvas.height/ 2;
     ctx.textAlign = "center";
-    ctx.textBaseLine = "middle";
+    ctx.textBaseline = "middle";
     ctx.fillText("GAME OVER", x,y);
     }
 
@@ -154,7 +154,7 @@ function reset(){
     obstaclesController.reset();
     gameSpeed = GAME_SPEED_START;
 
-    setScreen();
+    
     previousTime = null;
     requestAnimationFrame(gameLoop);
 }
@@ -186,24 +186,24 @@ startButton.addEventListener('click', startGame);
         
 
 function gameLoop(currentTime){
-    if (!isGameStarted){
-        return;
-    }
+    if (!isGameStarted) return;
+
     if (previousTime === null){
         previousTime = currentTime;
         gameLoopId = requestAnimationFrame(gameLoop);
         return;
     }
 
-        const frameTimeDelta = currentTime - previousTime;
-        previousTime = currentTime;
-        clearScreen();
+    const frameTimeDelta = currentTime - previousTime;
+    previousTime = currentTime;
+    clearScreen();
 
     if (!gameOver){
         //update game objects
     ground.update(gameSpeed, frameTimeDelta);
     obstaclesController.update(gameSpeed, frameTimeDelta);
     player.update(gameSpeed, frameTimeDelta);
+        
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
             setupReset();
@@ -220,8 +220,9 @@ function gameLoop(currentTime){
         return;
      }
 
+    requestAnimastionFrame(gameLoop);
     //if (isGameStarted && !gameOver) {
-    gameLoopId = requestAnimationFrame(gameLoop);
+    //gameLoopId = requestAnimationFrame(gameLoop);
     
 }    
     //requestAnimationFrame(gameLoop);
