@@ -201,12 +201,13 @@ function gameLoop(currentTime){
         ground.update(gameSpeed, frameTimeDelta);
         obstaclesController.update(gameSpeed, frameTimeDelta);
         player.update(gameSpeed, frameTimeDelta);
-        }
+        
 
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
             setupReset();
-        }
+            }
+        }            
 
         //draw game objects
         ground.draw();
