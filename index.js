@@ -132,7 +132,7 @@ function showGameOver(){
     ctx.fillText("GAME OVER", x,y);
     }
 
-function SetupReset(){
+function setupReset(){
     if (!hasAddedEventListenersForRestart){
         hasAddedEventListenersForRestart = true;
         
