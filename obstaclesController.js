@@ -58,4 +58,8 @@ export default class ObstacleController{
     collideWith(sprite){
         return this.obstacles.some(obstacle =>obstacle.collideWith(sprite));
     }
+
+    reset(){
+        this.obstacles = [];
+    }
 }
