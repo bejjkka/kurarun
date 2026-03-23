@@ -132,19 +132,20 @@ function showGameOver(){
     ctx.fillText("GAME OVER", x,y);
     }
 
-function SetupRestart(){
+function SetupReset(){
     if (!hasAddedEventListenersForRestart){
         hasAddedEventListenersForRestart = true;
         
-        setTimeout(()=> {window.addEventListener("keyup", reset,{once:true})
-        window.addEventListener("touchstart", reset,{once:true}); 
-        }, 1000);
+        setTimeout(()=> {
+            window.addEventListener("keyup", reset,{once:true});
+            window.addEventListener("touchstart", reset,{once:true}); 
+            }, 1000);
         //window.addEventListener("keyup", reset,{once:true})
         //window.addEventListener("touchstart", reset,{once:true})    
     }
 }
 
-function setupReset(){
+function reset(){
     hasAddedEventListenersForRestart = false;
     gameOver = false;
     ground.reset();
