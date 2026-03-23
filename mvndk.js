@@ -1,6 +1,6 @@
 import Player from './player.js';
-import Ground from './Ground.js';
-import ObstacleController from './ObstaclesController.js';
+import Ground from './ground.js';
+import ObstacleController from './obstaclesController.js';
 
 // game state
 let isGameStarted = false;
