@@ -126,7 +126,7 @@ function showGameOver(){
     const fontSize = 40* scaleRatio;
     ctx.font= `${fontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";
-    const x = canvas.width/2;
+    const x = canvas.width/50;
     const y = canvas.height/ 2;
     ctx.fillText("GAME OVER", x,y);
     }
