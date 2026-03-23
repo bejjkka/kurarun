@@ -14,7 +14,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const GAME_SPEED_START = 1.125;
-const GAME_SPEED_INCREMENT = 0.00002;
+const GAME_SPEED_INCREMENT = 0.00004;
 
 const GAME_WIDTH = 1100 ;
 const GAME_HEIGHT = 435;
@@ -127,7 +127,7 @@ function showGameOver(){
     ctx.font= `${fontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
-    const x = canvas.width/3;
+    const x = canvas.width/5;
     const y = canvas.height/ 2;
     ctx.fillText("GAME OVER", x,y);
     }
