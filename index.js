@@ -13,7 +13,7 @@ const startButton = document.getElementById('startButton');
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-const GAME_SPEED_START = 1.125;
+const GAME_SPEED_START = 1.0;
 const GAME_SPEED_INCREMENT = 0.00004;
 
 const GAME_WIDTH = 1100 ;
@@ -159,6 +159,10 @@ function reset(){
     requestAnimationFrame(gameLoop);
 }
 
+function updateGameSpeed(frameTimeDelta){
+    gameSpeed += frameTimedelta * GAME_SPEED_INCREMENT;
+}
+
 function clearScreen(){
     ctx.fillStyle ="#E7A1B0";
     ctx.fillRect(0,0,canvas.width, canvas.height);
@@ -186,6 +190,7 @@ startButton.addEventListener('click', startGame);
         
 
 function gameLoop(currentTime){
+    console.log(gameSpeed);
     if (!isGameStarted) return;
 
     if (previousTime === null){
@@ -203,6 +208,7 @@ function gameLoop(currentTime){
     ground.update(gameSpeed, frameTimeDelta);
     obstaclesController.update(gameSpeed, frameTimeDelta);
     player.update(gameSpeed, frameTimeDelta);
+    updateGameSpeed(frameTimeDelta);
         
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
