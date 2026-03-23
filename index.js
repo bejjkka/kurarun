@@ -202,7 +202,7 @@ function gameLoop(currentTime){
 
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
-            setupReset()
+            setupReset();
         }
 
         //draw game objects
