@@ -90,7 +90,7 @@ export default class Player{
         if (this.jumpInProgress && !this.falling){
             if (this.y > this.canvas.height - this.minJumpHeight ||
             (this.y >this.canvas.height - this.maxJumpHeight && this.jumpPressed)) {
-                this.y -=this.JUMP_SPEED *frameTimeDelta * this.scaleRatio;
+                this.y -=this.JUMP_SPEED * frameTimeDelta * this.scaleRatio;
             }
             else{
                 this.falling = true;
