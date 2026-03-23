@@ -144,6 +144,15 @@ function startGame() {
 startButton.addEventListener('click', startGame);
 
 
+function showGameOver(){
+    const fontSize = 80* scaleRatio;
+    ctx.font= '${fontSize}px Verdana';
+    ctx.fillStyle = "pink";
+    const x = canvas.width/4.5;
+    const.y = canvas.height/ 2;
+    ctx.fillText("GAME OVER", x,y);
+    }
+        
 
 function gameLoop(currentTime){
     if (!isGameStarted){
@@ -175,6 +184,9 @@ function gameLoop(currentTime){
         obstaclesController.draw();
         player.draw();
 
+        if (gameOver) {
+            showGameOver();
+        }
 
     if (isGameStarted && !gameOver) {
         gameLoopId = requestAnimationFrame(gameLoop);
