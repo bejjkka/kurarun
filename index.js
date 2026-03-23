@@ -136,10 +136,10 @@ function setupReset(){
     if (!hasAddedEventListenersForRestart){
         hasAddedEventListenersForRestart = true;
         
-        //setTimeout(()=> {
+        setTimeout(()=> {
             window.addEventListener("keyup", reset,{once:true});
             window.addEventListener("touchstart", reset,{once:true}); 
-            //}, 1000);
+            }, 500);
         //window.addEventListener("keyup", reset,{once:true})
         //window.addEventListener("touchstart", reset,{once:true})    
     }
