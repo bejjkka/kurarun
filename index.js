@@ -220,7 +220,7 @@ function gameLoop(currentTime){
         return;
      }
 
-    requestAnimastionFrame(gameLoop);
+    requestAnimationFrame(gameLoop);
     //if (isGameStarted && !gameOver) {
     //gameLoopId = requestAnimationFrame(gameLoop);
     
