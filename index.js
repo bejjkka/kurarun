@@ -1,7 +1,7 @@
 import Player from './player.js';
 import Ground from './ground.js';
 import ObstacleController from './obstaclesController.js';
-
+import Score from './score.js;
 // game state
 let isGameStarted = false;
 let gameLoopId = null;
@@ -46,6 +46,7 @@ const OBSTACLES_CONFIG = [
 let player = null;
 let ground = null;
 let obstaclesController = null;
+let score = null;
 
 
 let scaleRatio = null;
@@ -81,6 +82,8 @@ function createSprites(){
         };
     });
     obstaclesController = new ObstacleController(ctx, obstaclesImages, scaleRatio, GROUND_AND_OBSTACLE_SPEED);
+
+    score = new Score(ctx, scaleRatio);
 }
 
 function setScreen(){
@@ -157,6 +160,7 @@ function reset(){
     gameOver = false;
     ground.reset();
     obstaclesController.reset();
+    score.reset();
     gameSpeed = GAME_SPEED_START;
 
     
@@ -214,11 +218,13 @@ function gameLoop(currentTime){
     ground.update(gameSpeed, frameTimeDelta);
     obstaclesController.update(gameSpeed, frameTimeDelta);
     player.update(gameSpeed, frameTimeDelta);
+    score.update(frameTimeDelta);
     updateGameSpeed(frameTimeDelta);
         
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
             setupReset();
+            score.setHighScore();
         }
     }            
 
@@ -226,6 +232,7 @@ function gameLoop(currentTime){
     ground.draw();
     obstaclesController.draw();
     player.draw();
+    score.draw();
 
     if (gameOver) {
         showGameOver();
