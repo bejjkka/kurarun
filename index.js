@@ -13,8 +13,8 @@ const startButton = document.getElementById('startButton');
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-const GAME_SPEED_START = 0.00000025;
-const GAME_SPEED_INCREMENT = 0.000000000004;
+const GAME_SPEED_START = 0.3;
+const GAME_SPEED_INCREMENT = 0.00005;
 
 const GAME_WIDTH = 1100 ;
 const GAME_HEIGHT = 435;
@@ -161,7 +161,7 @@ function reset(){
 
 function updateGameSpeed(frameTimeDelta){
     gameSpeed += frameTimeDelta * GAME_SPEED_INCREMENT;
-    gameSpeed = Math.min(gameSpeed, 10.0);
+    gameSpeed = Math.min(gameSpeed, 0.80);
 }
 
 function clearScreen(){
