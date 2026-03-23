@@ -153,7 +153,8 @@ function reset(){
     gameSpeed = GAME_SPEED_START;
 
     setScreen();
-    
+    previousTime = null;
+    gameLoopId = requestAnimationFrame(gameLoop);
 }
 
 function clearScreen(){
@@ -213,7 +214,8 @@ function gameLoop(currentTime){
     player.draw();
 
     if (gameOver) {
-          showGameOver();
+        showGameOver();
+        return;
      }
 
     //if (isGameStarted && !gameOver) {
