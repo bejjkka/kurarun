@@ -20,8 +20,8 @@ export default class Player{
         this.scaleRatio= scaleRatio;
         
 
-        this.x = 10 * scaleRatio;
-        this.y = this.canvas.height - this.height - 1.5 * scaleRatio;
+        this.x = 10 * this.scaleRatio;
+        this.y = this.canvas.height - this.height - 1.5 * this.scaleRatio;
         this.yStandingPosition = this.y;
 
         this.standingStillImage = new Image();
@@ -90,7 +90,7 @@ export default class Player{
         if (this.jumpInProgress && !this.falling){
             if (this.y > this.canvas.height - this.minJumpHeight ||
             (this.y >this.canvas.height - this.maxJumpHeight && this.jumpPressed)) {
-                this.y -=this.JUMP_SPEED *frameTimeDelta * scaleRatio;
+                this.y -=this.JUMP_SPEED *frameTimeDelta * this.scaleRatio;
             }
             else{
                 this.falling = true;
@@ -98,7 +98,7 @@ export default class Player{
         }
         else {
             if (this.y < this.yStandingPosition){
-                this.y += this.GRAVITY * frameTimeDelta * scaleRatio;
+                this.y += this.GRAVITY * frameTimeDelta * tjis.scaleRatio;
                 if (this.y + this.height >this.canvas.height){
                     this.y = this.yStandingPosition;
                 }
