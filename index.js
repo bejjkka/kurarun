@@ -52,6 +52,7 @@ let scaleRatio = null;
 let previousTime = null;
 let gameSpeed = GAME_SPEED_START;
 let gameOver = false;
+let hasAddedEventListenersForRestart  = false;
 
 function createSprites(){
     const playerWidthInGame =  PLAYER_WIDTH * scaleRatio;
@@ -126,11 +127,31 @@ function showGameOver(){
     const fontSize = 40* scaleRatio;
     ctx.font= `${fontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";
-    const x = canvas.width;
+    const x = canvas.width/2;
     const y = canvas.height/ 2;
     ctx.fillText("GAME OVER", x,y);
     }
 
+function SetupRestart(){
+    if (!hasAddedEventListenersForRestart){
+        hasAddedEventListenersForRestart = true;
+        
+        setTimeout(()=> {window.addEventListener("keyup", reset,{once:true})
+        window.addEventListener("touchstart", reset,{once:true}); 
+        }, 1000);
+        //window.addEventListener("keyup", reset,{once:true})
+        //window.addEventListener("touchstart", reset,{once:true})    
+    }
+}
+
+function reset(){
+    hasAddedEventListenersForRestart = false;
+    gameOver = false;
+    ground.reset();
+    obstaclesController.reset();
+    gameSpeed = GAME_SPEED_START;
+    
+}
 
 function clearScreen(){
     ctx.fillStyle ="#E7A1B0";
@@ -181,6 +202,7 @@ function gameLoop(currentTime){
 
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
+            setupReset()
         }
 
         //draw game objects
