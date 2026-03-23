@@ -1,7 +1,7 @@
 import Player from './player.js';
 import Ground from './ground.js';
 import ObstacleController from './obstaclesController.js';
-import Score from './score.js;
+import Score from './score.js';
 // game state
 let isGameStarted = false;
 let gameLoopId = null;
