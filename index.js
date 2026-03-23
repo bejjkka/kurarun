@@ -13,7 +13,7 @@ const startButton = document.getElementById('startButton');
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-const GAME_SPEED_START = 1.25;
+const GAME_SPEED_START = 1.0;
 const GAME_SPEED_INCREMENT = 0.00004;
 
 const GAME_WIDTH = 1100 ;
@@ -160,7 +160,7 @@ function reset(){
 }
 
 function updateGameSpeed(frameTimeDelta){
-    gameSpeed += frameTimedelta * GAME_SPEED_INCREMENT;
+    gameSpeed += frameTimeDelta * GAME_SPEED_INCREMENT;
 }
 
 function clearScreen(){
@@ -190,7 +190,7 @@ startButton.addEventListener('click', startGame);
         
 
 function gameLoop(currentTime){
-    console.log(gameSpeed);
+    //console.log(gameSpeed);
     if (!isGameStarted) return;
 
     if (previousTime === null){
