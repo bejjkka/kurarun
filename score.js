@@ -19,7 +19,7 @@ export default class Score{
 
   setHighScore(){
   const highScore = Number(localStorage.getItem(this.HIGH_SCORE_KEY));
-  if(this.score > highScore{
+  if(this.score > highScore){
       localStorage.setItem(this.HIGH_SCORE_KEY, Math.floor(this.score));
     }
   }
@@ -27,17 +27,17 @@ export default class Score{
   draw(){
     const highScore = Number(localStorage.getItem(this.HIGH_SCORE_KEY));
     const y = 10 * this.scaleRatio;
-    const smallfontSize = 15* scaleRatio;
+    const smallfontSize = 15 * this.scaleRatio;
     this.ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     this.ctx.fillStyle = "white";    
     const scoreX = this.canvas.width - 75 * this.scaleRatio;
-    const highScore = scoreX- 150 * this.scaleRatio;
+    const highScoreX = scoreX- 150 * this.scaleRatio;
 
     //padding for additional zeros
     const scorePadded = Math.floor(this.score).toString().padStart(5,0);
     const highScorePadded = highScore.toString().padStart(5,0);
 
     this.ctx.fillText(scorePadded, scoreX,y);
-    this.ctx.fillText(`Highscore: ${scorePadded}`, highScoreX,y);
+    this.ctx.fillText(`Highscore: ${highScorePadded}`, highScoreX,y);
   }
 }
