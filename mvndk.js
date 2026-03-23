@@ -13,8 +13,8 @@ const startButton = document.getElementById('startButton');
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-const GAME_SPEED_START = 1.0;
-const GAME_SPEED_INCREMENT = 0.00002;
+const GAME_SPEED_START = 1.5;
+const GAME_SPEED_INCREMENT = 0.00004;
 
 const GAME_WIDTH = 1100 ;
 const GAME_HEIGHT = 435;
@@ -24,7 +24,7 @@ const MAX_JUMP_HEIGHT = GAME_HEIGHT;
 const MIN_JUMP_HEIGHT = 380;
 const GROUND_WIDTH = 1000;
 const GROUND_HEIGHT = 100;
-const GROUND_AND_OBSTACLE_SPEED = 0.2;
+const GROUND_AND_OBSTACLE_SPEED = 1.0;
 
 
 const OBSTACLES_CONFIG = [
