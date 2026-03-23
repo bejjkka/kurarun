@@ -132,7 +132,7 @@ function showGameOver(){
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText("GAME OVER", x,y);
-    }
+    
     const smallfontSize = 15* scaleRatio;
     ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";    
