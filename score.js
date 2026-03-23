@@ -30,8 +30,8 @@ export default class Score{
     const smallfontSize = 15 * this.scaleRatio;
     this.ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     this.ctx.fillStyle = "white";    
-    const scoreX = this.canvas.width - 100 * this.scaleRatio;
-    const highScoreX = scoreX- 275 * this.scaleRatio;
+    const scoreX = this.canvas.width - 75 * this.scaleRatio;
+    const highScoreX = scoreX- 250 * this.scaleRatio;
 
     //padding for additional zeros
     const scorePadded = Math.floor(this.score).toString().padStart(5,0);
