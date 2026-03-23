@@ -46,4 +46,8 @@ export default class Ground{
         this.ctx.beginPath();
         const baseLine = this.canvas.height -1.5 * this.scaleRatio;
     } 
+
+    reset(){
+        this.x= 0;
+    }
 }
