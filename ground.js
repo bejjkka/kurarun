@@ -48,6 +48,6 @@ export default class Ground{
     } 
 
     reset(){
-        this.x= 0;
+        this.x = 0;
     }
 }
