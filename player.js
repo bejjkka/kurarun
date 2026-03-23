@@ -6,7 +6,7 @@ export default class Player{
     jumpPressed = false;
     jumpInProgress = false;
     falling = false;
-    JUMP_SPEED = 0.2;
+    JUMP_SPEED = 0.05;
     GRAVITY = 0.05;
 
 
