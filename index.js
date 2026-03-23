@@ -183,7 +183,7 @@ startButton.addEventListener('click', startGame);
         
 
 function gameLoop(currentTime){
-    if (!isGameStarted)
+    if (!isGameStarted){
         return;
     }
     if (previousTime === null){
@@ -216,8 +216,8 @@ function gameLoop(currentTime){
           showGameOver();
      }
 
-    if (isGameStarted && !gameOver) {
-        gameLoopId = requestAnimationFrame(gameLoop);
+    //if (isGameStarted && !gameOver) {
+    gameLoopId = requestAnimationFrame(gameLoop);
     }
 }    
     //requestAnimationFrame(gameLoop);
