@@ -129,6 +129,8 @@ function showGameOver(){
     ctx.fillStyle = "white";
     const x = canvas.width/2;
     const y = canvas.height/ 2;
+    ctx.textAlign = "center";
+    ctx.textBaseLine = "middle";
     ctx.fillText("GAME OVER", x,y);
     }
 
