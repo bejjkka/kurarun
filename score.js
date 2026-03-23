@@ -29,7 +29,7 @@ export default class Score{
     const y = 20 * this.scaleRatio;
     const smallfontSize = 15 * this.scaleRatio;
     this.ctx.font= `${smallfontSize}px 'Press Start 2P'`;
-    this.ctx.fillStyle = "white";    
+    this.ctx.fillStyle = "grey";    
     const scoreX = this.canvas.width - 75 * this.scaleRatio;
     const highScoreX = scoreX- 250 * this.scaleRatio;
 
@@ -38,6 +38,6 @@ export default class Score{
     const highScorePadded = highScore.toString().padStart(5,0);
 
     this.ctx.fillText(scorePadded, scoreX,y);
-    this.ctx.fillText(`Highscore: ${highScorePadded}`, highScoreX,y);
+    this.ctx.fillText(`Highscore:${highScorePadded}`, highScoreX,y);
   }
 }
