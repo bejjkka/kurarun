@@ -18,7 +18,7 @@ export default class Obstacle{
 
     collideWith(sprite){
         //axis-aligned bounding box
-        const adjustBy = 1.6;
+        const adjustBy = 1.4;
         if (
             sprite.x < this.x + this.width/adjustBy &&
             sprite.x + sprite.width/ adjustBy > this.x &&
