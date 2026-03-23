@@ -138,7 +138,7 @@ function clearScreen(){
 }
 
 function startGame() {
-    if (isGameStarted) return; // Prevent starting multiple times
+    if (isGameStarted && !gameOver) return; // Prevent starting multiple times
 
     previousTime = null;
     isGameStarted = true;
