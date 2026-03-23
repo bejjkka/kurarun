@@ -141,7 +141,7 @@ function setupReset(){
         setTimeout(()=> {
             window.addEventListener("keyup", reset,{once:true});
             window.addEventListener("touchstart", reset,{once:true}); 
-            }, 500);
+            }, 1000);
         //window.addEventListener("keyup", reset,{once:true})
         //window.addEventListener("touchstart", reset,{once:true})    
     }
@@ -156,7 +156,7 @@ function reset(){
 
     setScreen();
     previousTime = null;
-    gameLoopId = requestAnimationFrame(gameLoop);
+    requestAnimationFrame(gameLoop);
 }
 
 function clearScreen(){
