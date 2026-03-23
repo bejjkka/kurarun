@@ -131,12 +131,12 @@ function showGameOver(){
     const y = canvas.height/ 2;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("GAME OVER", x,y);
+    ctx.fillText("GAME OVER!", x,y);
     
     const smallfontSize = 15* scaleRatio;
     ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     ctx.fillStyle = "white";    
-    ctx.fillText("*to retry click Space or tap the screen", canvas.width/2, canvas.height/2 + 60 * scaleRatio);
+    ctx.fillText("*to retry: space/screen tap", canvas.width/2, canvas.height/2 + 60 * scaleRatio);
     }
 
 function setupReset(){
