@@ -144,7 +144,7 @@ function SetupRestart(){
     }
 }
 
-function reset(){
+function setupReset(){
     hasAddedEventListenersForRestart = false;
     gameOver = false;
     ground.reset();
