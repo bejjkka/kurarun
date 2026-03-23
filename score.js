@@ -26,7 +26,7 @@ export default class Score{
 
   draw(){
     const highScore = Number(localStorage.getItem(this.HIGH_SCORE_KEY));
-    const y = 10 * this.scaleRatio;
+    const y = 20 * this.scaleRatio;
     const smallfontSize = 15 * this.scaleRatio;
     this.ctx.font= `${smallfontSize}px 'Press Start 2P'`;
     this.ctx.fillStyle = "white";    
