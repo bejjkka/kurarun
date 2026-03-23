@@ -14,7 +14,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const GAME_SPEED_START = 0.75;
-const GAME_SPEED_INCREMENT = 0.000002;
+const GAME_SPEED_INCREMENT = 0.000007;
 
 const GAME_WIDTH = 1100 ;
 const GAME_HEIGHT = 435;
