@@ -123,7 +123,7 @@ export function getGroundYAtX(x, baseLine, maxCurveDepth, gameWidth, xOffset){
 }
 
 function showGameOver(){
-    const fontSize = 80* scaleRatio;
+    const fontSize = 40* scaleRatio;
     ctx.font= `${fontSize}px Verdana`;
     ctx.fillStyle = "white";
     const x = canvas.width/4.5;
