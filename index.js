@@ -144,7 +144,7 @@ function startGame() {
     startScreen.style.display = 'none';
     
     // 2. Set the game state
-    prevoiousTime = null;
+    previousTime = null;
     isGameStarted = true;
     gameOver = false;
     gameSpeed = GAME_SPEED_START;
