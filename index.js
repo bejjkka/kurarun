@@ -183,7 +183,7 @@ startButton.addEventListener('click', startGame);
         
 
 function gameLoop(currentTime){
-    if (!isGameStarted){
+    if (!isGameStarted)
         return;
     }
     if (previousTime === null){
@@ -196,27 +196,25 @@ function gameLoop(currentTime){
         previousTime = currentTime;
         clearScreen();
 
-        if (!gameOver){
+    if (!gameOver){
         //update game objects
-        ground.update(gameSpeed, frameTimeDelta);
-        obstaclesController.update(gameSpeed, frameTimeDelta);
-        player.update(gameSpeed, frameTimeDelta);
-        
-
+    ground.update(gameSpeed, frameTimeDelta);
+    obstaclesController.update(gameSpeed, frameTimeDelta);
+    player.update(gameSpeed, frameTimeDelta);
         if (!gameOver && obstaclesController.collideWith(player)){
             gameOver = true;
             setupReset();
-            }
-        }            
+        }
+    }            
 
         //draw game objects
-        ground.draw();
-        obstaclesController.draw();
-        player.draw();
+    ground.draw();
+    obstaclesController.draw();
+    player.draw();
 
-        if (gameOver) {
-            showGameOver();
-        }
+    if (gameOver) {
+          showGameOver();
+     }
 
     if (isGameStarted && !gameOver) {
         gameLoopId = requestAnimationFrame(gameLoop);
