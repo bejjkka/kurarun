@@ -151,6 +151,8 @@ function reset(){
     ground.reset();
     obstaclesController.reset();
     gameSpeed = GAME_SPEED_START;
+
+    setScreen();
     
 }
 
