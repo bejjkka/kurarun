@@ -140,16 +140,17 @@ function clearScreen(){
 function startGame() {
     if (isGameStarted) return; // Prevent starting multiple times
 
-    // 1. Hide the start screen
-    startScreen.style.display = 'none';
-    
-    // 2. Set the game state
     previousTime = null;
     isGameStarted = true;
     gameOver = false;
     gameSpeed = GAME_SPEED_START;
+
+    setScreen();
     
-    // 3. Start the main loop
+    startScreen.style.display = 'none';
+    
+    
+    // Start the main loop
     gameLoopId = requestAnimationFrame(gameLoop);
 }
 startButton.addEventListener('click', startGame);
