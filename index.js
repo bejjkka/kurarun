@@ -126,7 +126,7 @@ export function getGroundYAtX(x, baseLine, maxCurveDepth, gameWidth, xOffset){
 function showGameOver(){
     const fontSize = 40* scaleRatio;
     ctx.font= `${fontSize}px 'Press Start 2P'`;
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "white";
     const x = canvas.width/2;
     const y = canvas.height/ 2;
     ctx.textAlign = "center";
