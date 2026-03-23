@@ -149,7 +149,7 @@ function showGameOver(){
     ctx.font= `${fontSize}px Verdana`;
     ctx.fillStyle = "white";
     const x = canvas.width/4.5;
-    const.y = canvas.height/ 2;
+    const y = canvas.height/ 2;
     ctx.fillText("GAME OVER", x,y);
     }
         
