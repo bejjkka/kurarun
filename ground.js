@@ -35,16 +35,16 @@ export default class Ground{
             this.x = 0;
         }
 
-        if (!this.pattern){
-            this.ctx.fillStyle = "darkgrey";
-        } else {
-            this.ctx.fillStyle = this.pattern;
-            this.ctx.save();
-            this.ctx.translate(-this.xOffset % this.groundImage.width, 0);
-        }
+        //if (!this.pattern){
+          //  this.ctx.fillStyle = "darkgrey";
+        //} else {
+        //  this.ctx.fillStyle = this.pattern;
+        //this.ctx.save();
+        //    this.ctx.translate(-this.xOffset % this.groundImage.width, 0);
+        //}
 
-        this.ctx.beginPath();
-        const baseLine = this.canvas.height -1.5 * this.scaleRatio;
+        //this.ctx.beginPath();
+        //const baseLine = this.canvas.height -1.5 * this.scaleRatio;
     } 
 
     reset(){
