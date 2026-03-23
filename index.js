@@ -122,6 +122,16 @@ export function getGroundYAtX(x, baseLine, maxCurveDepth, gameWidth, xOffset){
 
 }
 
+function showGameOver(){
+    const fontSize = 80* scaleRatio;
+    ctx.font= `${fontSize}px Verdana`;
+    ctx.fillStyle = "white";
+    const x = canvas.width/4.5;
+    const y = canvas.height/ 2;
+    ctx.fillText("GAME OVER", x,y);
+    }
+
+
 function clearScreen(){
     ctx.fillStyle ="#E7A1B0";
     ctx.fillRect(0,0,canvas.width, canvas.height);
@@ -134,6 +144,7 @@ function startGame() {
     startScreen.style.display = 'none';
     
     // 2. Set the game state
+    prevoiousTime = null;
     isGameStarted = true;
     gameOver = false;
     gameSpeed = GAME_SPEED_START;
@@ -144,14 +155,6 @@ function startGame() {
 startButton.addEventListener('click', startGame);
 
 
-function showGameOver(){
-    const fontSize = 80* scaleRatio;
-    ctx.font= `${fontSize}px Verdana`;
-    ctx.fillStyle = "white";
-    const x = canvas.width/4.5;
-    const y = canvas.height/ 2;
-    ctx.fillText("GAME OVER", x,y);
-    }
         
 
 function gameLoop(currentTime){
