@@ -98,7 +98,7 @@ export default class Player{
         }
         else {
             if (this.y < this.yStandingPosition){
-                this.y += this.GRAVITY * frameTimeDelta * tjis.scaleRatio;
+                this.y += this.GRAVITY * frameTimeDelta * this.scaleRatio;
                 if (this.y + this.height >this.canvas.height){
                     this.y = this.yStandingPosition;
                 }
