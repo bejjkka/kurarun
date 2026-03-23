@@ -126,7 +126,7 @@ export function getGroundYAtX(x, baseLine, maxCurveDepth, gameWidth, xOffset){
 function showGameOver(){
     const fontSize = 40* scaleRatio;
     ctx.font= `${fontSize}px 'Press Start 2P'`;
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "olive";
     const x = canvas.width/2;
     const y = canvas.height/ 2;
     ctx.textAlign = "center";
@@ -165,7 +165,7 @@ function clearScreen(){
 }
 
 function startGame() {
-    if (isGameStarted && !gameOver) return; // Prevent starting multiple times
+    if (isGameStarted && !gameOver) return;
 
     previousTime = null;
     isGameStarted = true;
