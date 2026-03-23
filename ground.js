@@ -27,6 +27,7 @@ export default class Ground{
     }
 
     draw(){
+        console.log("ground y:", this.y, "canvas height:", this.canvas.height, "height:", this.height);
         this.ctx.drawImage (this.groundImage, this.x, this.y, this.width, this.height);
     
         this.ctx.drawImage (this.groundImage, this.x + this.width, this.y, this.width, this.height);
