@@ -161,7 +161,7 @@ function reset(){
 
 function updateGameSpeed(frameTimeDelta){
     gameSpeed += frameTimeDelta * GAME_SPEED_INCREMENT;
-    gameSpeed = Math.min(gameSpeed, 20.0);
+    gameSpeed = Math.min(gameSpeed, 10.0);
 }
 
 function clearScreen(){
